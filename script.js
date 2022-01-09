@@ -1,9 +1,8 @@
-"use strict";
+'use strict';
 
+//Selecting elements
 const startScreen = document.querySelector(`.start-screen`);
-const startInstruction = document.querySelector(`.start--instruction`);
+const noteMainEl = document.querySelector(`.note-app--main`);
 
-startInstruction.classList.add(`hidden`);
-setTimeout(() => {
-  startInstruction.classList.remove(`hidden`);
-}, 1500);
+// noteMainEl.classList.add(`hidden`);
+startScreen.classList.add(`hidden`);
