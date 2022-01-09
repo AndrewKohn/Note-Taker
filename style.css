@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #262833;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-screen {
+  position: relative;
+  width: 90rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.start--title {
+  font-size: 6.4rem;
+  font-weight: 800;
+  line-height: 5rem;
+  text-align: right;
+  letter-spacing: -0.3rem;
+  color: aliceblue;
+}
+
+.seperator {
+  border: aliceblue solid 1px;
+  opacity: 50%;
+}
+
+.start--title::first-line {
+  font-weight: 300;
+}
+
+.start--new-note {
+  height: 2.8rem;
+  resize: none;
+  font-size: 2.4rem;
+  color: #eee;
+  background-color: #262833;
+  animation: slide-right 1s ease-in;
+}
+
+.start--instruction {
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0;
+  transform: translateY(3.5rem);
+  margin-right: 3rem;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+  color: #af9e39;
+  text-align: right;
+  animation: fade-element 2.5s infinite;
+}
+
+@keyframes fade-element {
+  0% {
+    color: #262833;
+  }
+  50% {
+    color: #af9e39;
+  }
+  100% {
+    color: #262833;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    margin-right: 100%;
+  }
+  to {
+    marging-right: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
