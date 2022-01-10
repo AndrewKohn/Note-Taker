@@ -4,8 +4,6 @@
 const startScreenEl = document.querySelector(`.start-screen`);
 const noteMainEl = document.querySelector(`.note-app--main`);
 
-noteMainEl.classList.add('hidden');
-
 // Start Screen Input
 document
   .querySelector(`.start--input-name`)
