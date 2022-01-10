@@ -1,3 +1,10 @@
+/*
+  //Colors
+    text = #333 aliceblue #eee #af9e39
+    primary = #262833 
+    default border = rgba(238, 238, 238, 0.35) solid 3px
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +33,6 @@ main {
 /* STARTING SCREEN */
 /* *************** */
 .start-screen {
-  position: relative;
   width: 90rem;
   display: flex;
   flex-direction: column;
@@ -52,7 +58,7 @@ main {
   opacity: 50%;
 }
 
-.start--new-note {
+.start--input-name {
   height: 2.8rem;
   resize: none;
   font-size: 2.4rem;
@@ -74,18 +80,22 @@ main {
   letter-spacing: 0.25rem;
   color: #af9e39;
   text-align: right;
+}
+
+.fade-element {
   animation: fade-element 2.5s infinite;
 }
 
 @keyframes fade-element {
   0% {
-    color: #262833;
+    opacity: 0;
   }
   50% {
+    opacity: 100%;
     color: #af9e39;
   }
   100% {
-    color: #262833;
+    opacity: 0;
   }
 }
 
@@ -98,16 +108,75 @@ main {
   }
 }
 
+/* ************************* */
+/* START TRANSITION SETTINGS */
+/* ************************* */
+.transition--title {
+  animation: travel--top 1.5s ease-in;
+}
+
+.transition--fade {
+  animation: fade 0.75s ease-in;
+}
+
+.transition--fade-out {
+  animation: fade-out 1.5s ease-out;
+}
+
+@keyframes travel--top {
+  0% {
+    /* color: green; */
+  }
+  100% {
+    transform: translateY(-27rem);
+    /* color: red; */
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 65%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* ****************** */
 /* NOTE APP SETTINGS */
 /* ***************** */
 .note-app--main {
-  position: absolute;
   width: 120rem;
   height: 80rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
   background-color: rgba(240, 248, 255, 0.1);
-  transform: translate(-50%, -50%);
   border-radius: 5px;
+}
+
+.note--title {
+  margin: 5rem 15rem 0 0;
+  font-size: 6.4rem;
+  font-weight: 800;
+  line-height: 5rem;
+  text-align: right;
+  letter-spacing: 0.11rem;
+  color: aliceblue;
+}
+
+.note--title::first-line {
+  font-weight: 300;
+  letter-spacing: -0.3rem;
 }
 
 /* ************************ */
@@ -115,4 +184,16 @@ main {
 /* ************************ */
 .hidden {
   display: none;
+}
+
+.pos--absolute {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* TESTERS */
+.btn--test-transition {
+  position: absolute;
+  transform: translateY(-35rem);
+  padding: 1.2rem 2.5rem;
 }
