@@ -39,5 +39,6 @@ document
     if (e.key === 'Enter' && noteMainEl.classList.contains(`hidden`)) {
       waitForTransition();
       noteMainEl.classList.add(`transition--fade`);
+      document.querySelector(`.name`).textContent = userName + `'s Notes`;
     }
   });
