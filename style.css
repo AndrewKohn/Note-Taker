@@ -120,7 +120,7 @@ main {
 }
 
 .transition--fade-out {
-  animation: fade-out 1.5s ease-out;
+  animation: fade-out 1.6s ease-out;
 }
 
 @keyframes travel--top {
