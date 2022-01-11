@@ -4,6 +4,15 @@
 const startScreenEl = document.querySelector(`.start-screen`);
 const noteMainEl = document.querySelector(`.note-app--main`);
 
+function loadingBackgroundImg() {
+  setTimeout(() => {
+    document.querySelector(`.loader`).classList.toggle(`hidden`);
+    startScreenEl.classList.remove(`hidden`);
+  }, 1000);
+}
+
+loadingBackgroundImg();
+
 // Start Screen Input
 document
   .querySelector(`.start--input-name`)

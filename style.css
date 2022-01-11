@@ -35,7 +35,7 @@ main {
       rgba(38, 40, 51, 0.99),
       rgba(38, 40, 51, 0.95)
     ),
-    url('img/background-img.jpg');
+    url('img/background-img.webp');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -95,35 +95,23 @@ main {
   text-align: right;
 }
 
+/* ************************* */
+/* START TRANSITION SETTINGS */
+/* ************************* */
+/* LOADING CIRCLE */
+.loader {
+  border: 0.8rem solid #464a5e;
+  border-top: 0.8rem solid #af9e39;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  animation: spin 0.5s linear infinite;
+}
+
 .fade-element {
   animation: fade-element 2.5s infinite;
 }
 
-@keyframes fade-element {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 100%;
-    color: #af9e39;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes slide-right {
-  from {
-    margin-right: 100%;
-  }
-  to {
-    margin-right: 0;
-  }
-}
-
-/* ************************* */
-/* START TRANSITION SETTINGS */
-/* ************************* */
 .transition--title {
   animation: travel--top 1.5s ease-in;
 }
@@ -161,6 +149,37 @@ main {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-element {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+    color: #af9e39;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    margin-right: 100%;
+  }
+  to {
+    margin-right: 0;
   }
 }
 
