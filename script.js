@@ -52,9 +52,56 @@ document
     }
   });
 
-//Create New Note
+/***********************/
+/*  MAIN MENU ACTIONS  */
+/***********************/
 document
   .querySelector(`.nav-link--create`)
+  .addEventListener('click', function () {
+    document.querySelector(`.new-note`).classList.toggle(`hidden`);
+  });
+
+/*************************/
+/*  CREATE NOTE ACTIONS  */
+/*************************/
+document
+  .querySelector(`.btn--create-note`)
+  .addEventListener('click', function () {
+    // (TODO:) create functionality
+    //  add a new animation for fade out & opacity transition
+    document.querySelector(`.message--text`).textContent = `Note Created`;
+    document.querySelector(`.message`).classList.toggle(`hidden`);
+    document
+      .querySelector(`.new-note`)
+      .classList.toggle('transition--opacity-65');
+    document
+      .querySelector(`.message`)
+      .classList.toggle('transition--opacity-65');
+    document.querySelector(`.new-note`).style.opacity = `65%`;
+    document.querySelector(`.message`).style.opacity = `65%`;
+
+    setTimeout(() => {
+      document
+        .querySelector(`.new-note`)
+        .classList.toggle('transition--opacity-65');
+      document
+        .querySelector(`.message`)
+        .classList.toggle('transition--opacity-65');
+      document
+        .querySelector(`.message`)
+        .classList.toggle(`transition--fade-out`);
+      document
+        .querySelector(`.new-note`)
+        .classList.toggle(`transition--fade-out`);
+      setTimeout(() => {
+        document.querySelector(`.message`).classList.toggle(`hidden`);
+        document.querySelector(`.new-note`).classList.toggle(`hidden`);
+      }, 1500);
+    }, 1500);
+  });
+
+document
+  .querySelector(`.btn--cancel-note`)
   .addEventListener('click', function () {
     document.querySelector(`.new-note`).classList.toggle(`hidden`);
   });

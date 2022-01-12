@@ -18,7 +18,7 @@
     <main>
       <div class="loader pos--absolute"></div>
       <!-- STARTING SCREEN -->
-      <section class="start-screen pos--absolute hidden">
+      <section class="start-screen hidden">
         <h1 class="start--title">Note<br />Taker</h1>
         <hr class="seperator" />
         <input
@@ -30,7 +30,7 @@
       </section>
 
       <!-- NOTE APP MAIN -->
-      <section class="note-app--main pos--absolute hidden">
+      <section class="note-app--main hidden">
         <h1 class="note--title">Note<br />Taker</h1>
         <h3 class="name"></h3>
         <hr class="seperator">
@@ -43,13 +43,19 @@
       </section>
 
       <!-- NEW NOTE -->
-      <section class="new-note pos--absolute hidden">
+      <section class="new-note hidden">
+        <h2 class="window-title">Create New Note</h2>
         <input class="note--subject" />
         <textarea class="note--body"></textarea>
         <div class="btns">
           <button class="btn btn--create-note">Create</button>
           <button class="btn btn--cancel-note">Cancel</button>
         </div>
+      </section>
+
+      <!-- MESSAGE WINDOW -->
+      <section class="message hidden">
+          <p class="message--text"></p>
       </section>
     </main>
   </body>

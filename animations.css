@@ -21,7 +21,20 @@
 }
 
 .transition--fade-out {
-  animation: fade-out 1.6s ease-out;
+  animation: fade-out 1.6s ease-in;
+}
+
+.transition--opacity-65 {
+  animation: opacity-65 1.7s ease-in;
+}
+
+@keyframes opacity-65 {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 65%;
+  }
 }
 
 @keyframes travel--top {

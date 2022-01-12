@@ -12,12 +12,12 @@
 
 html {
   font-size: 62.5%;
-  font-weight: 400;
 }
 
 body {
   height: 100vh;
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   color: #333;
   background-color: #262833;
   display: flex;
@@ -46,6 +46,8 @@ main {
 /* STARTING SCREEN */
 /* *************** */
 .start-screen {
+  position: absolute;
+  transform: translate(-50%, -50%);
   width: 90rem;
   display: flex;
   flex-direction: column;
@@ -99,6 +101,8 @@ main {
 /* NOTE APP MAIN MENU SETTINGS */
 /* *************************** */
 .note-app--main {
+  position: absolute;
+  transform: translate(-50%, -50%);
   width: 120rem;
   height: 80rem;
   display: flex;
@@ -141,11 +145,12 @@ main {
 }
 
 .nav-list {
-  width: 22rem;
+  width: 25rem;
   margin-left: 30rem;
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  background-color: blueviolet;
 }
 
 .nav-link {
@@ -156,6 +161,7 @@ main {
   background: none;
   color: #fcc850;
   cursor: pointer;
+  background-color: crimson;
 }
 
 .nav-link:hover {
@@ -167,6 +173,8 @@ main {
 /* NEW NOTE SETTINGS */
 /* ***************** */
 .new-note {
+  position: absolute;
+  transform: translate(-50%, -50%);
   width: 100rem;
   height: 60rem;
   display: flex;
@@ -176,6 +184,11 @@ main {
   gap: 2rem;
   background-color: brown;
   border-radius: 5px;
+  /* opacity: 100%; */
+}
+
+.window-title {
+  font-size: 2.4rem;
 }
 
 .note--subject {
@@ -201,15 +214,31 @@ main {
 }
 
 /* ************************ */
+/* MESSAGE WINDOW SETTINGS */
+/* ************************ */
+.message {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 15rem;
+  /* opacity: 100%; */
+  background-color: #262833;
+}
+
+.message--text {
+  color: #353434;
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+/* ************************ */
 /* GENERAL/HELPER SETTINGS */
 /* ************************ */
 .hidden {
   display: none;
-}
-
-.pos--absolute {
-  position: absolute;
-  transform: translate(-50%, -50%);
 }
 
 /* TESTERS */
