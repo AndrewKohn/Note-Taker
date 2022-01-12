@@ -36,12 +36,21 @@
         <hr class="seperator">
         <h2 class="menu--title">MAIN MENU</h2>
         <div class="nav-list test-text">
-          <button class="nav-link">Create New Note</button>
-          <button class="nav-link">View Notes</button>
-          <button class="nav-link">Settings</button>
+          <button class="nav-link nav-link--create">Create New Note</button>
+          <button class="nav-link nav-link--view">View Notes</button>
+          <button class="nav-link nav-link--settings">Settings</button>
         </div>
       </section>
-      <!-- <button class="btn--test-transition">TEST</button> -->
+
+      <!-- NEW NOTE -->
+      <section class="new-note pos--absolute hidden">
+        <input class="note--subject" />
+        <textarea class="note--body"></textarea>
+        <div class="btns">
+          <button class="btn btn--create-note">Create</button>
+          <button class="btn btn--cancel-note">Cancel</button>
+        </div>
+      </section>
     </main>
   </body>
   <script src="script.js"></script>

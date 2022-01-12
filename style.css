@@ -163,6 +163,43 @@ main {
   font-weight: 700;
 }
 
+/* ***************** */
+/* NEW NOTE SETTINGS */
+/* ***************** */
+.new-note {
+  width: 100rem;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: brown;
+  border-radius: 5px;
+}
+
+.note--subject {
+  width: 80rem;
+  margin: 0 auto;
+  height: 2.8rem;
+  resize: none;
+  font-size: 2.4rem;
+}
+
+.note--body {
+  width: 80rem;
+  height: 40rem;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.btns {
+  width: 15rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* ************************ */
 /* GENERAL/HELPER SETTINGS */
 /* ************************ */

@@ -51,3 +51,10 @@ document
       document.querySelector(`.name`).textContent = userName + `'s Notes`;
     }
   });
+
+//Create New Note
+document
+  .querySelector(`.nav-link--create`)
+  .addEventListener('click', function () {
+    document.querySelector(`.new-note`).classList.toggle(`hidden`);
+  });
