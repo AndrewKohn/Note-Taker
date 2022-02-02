@@ -100,7 +100,7 @@ main {
 /* *************************** */
 /* NOTE APP MAIN MENU SETTINGS */
 /* *************************** */
-.note-app--main {
+.note-app--container {
   position: absolute;
   transform: translate(-50%, -50%);
   width: 120rem;
@@ -110,12 +110,13 @@ main {
   gap: 1.2rem;
   background-color: rgb(86, 90, 92, 0.45);
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .name {
   position: absolute;
   margin-top: 10rem;
-  margin-left: 15rem;
+  margin-left: 3.2rem;
   font-size: 4.8rem;
   font-weight: 400;
   color: aliceblue;
@@ -144,73 +145,111 @@ main {
   margin: 5rem 0 5rem 20rem;
 }
 
-.nav-list {
-  width: 25rem;
-  margin-left: 30rem;
+.note-app--main {
+  width: 100%;
+  height: 100%;
+  /* background-color: brown; */
   display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  background-color: blueviolet;
+  gap: 5px;
+  overflow: hidden;
 }
 
-.nav-link {
-  text-align: right;
+/* *************** */
+/* NAVIGATION MENU */
+/* *************** */
+.note-nav {
+  width: 30rem;
+  height: 61.375rem;
+  background-color: #262833;
+  margin-left: 1.2rem;
+}
+
+.nav-menu {
+  width: 100%;
+  height: 3.2rem;
+  background-color: #af9e39;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-list {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 5px;
+}
+
+.list-item {
+  width: 100%;
+  height: 5rem;
+  list-style: none;
+}
+
+.list-btn {
+  cursor: pointer;
+  width: 100%;
+  height: 3.6rem;
+  background: none;
+  border: none;
+  /* background-color: crimson; */
   font-size: 2rem;
-  letter-spacing: 0.4rem;
+  font-weight: 400;
+  color: aliceblue;
+}
+
+.list-btn:hover {
+  background-color: rgba(238, 238, 238, 0.115);
+}
+
+/* ****************** */
+/* NOTE AREA SETTINGS */
+/* ****************** */
+.note-area {
+  width: 100%;
+  height: 100%;
+  /* background-color: darkblue; */
+  margin-right: 1.2rem;
+}
+
+.subject-field {
+  width: 100%;
+  height: 2.8rem;
+  border: none;
+  margin-bottom: 5px;
+  font-size: 2rem;
+  text-align: center start;
+  font-weight: 600;
+  background: none;
+  background-color: rgba(240, 248, 255, 0.5);
+}
+
+.text-field {
+  width: 100%;
+  height: 58rem;
+  border: none;
+  font-size: 2rem;
+  font-weight: 400;
+  background: none;
+  background-color: rgba(240, 248, 255, 0.5);
+}
+
+/* *************** */
+/* BUTTON SETTINGS */
+/* *************** */
+.btn {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
   border: none;
   background: none;
-  color: #fcc850;
-  cursor: pointer;
-  background-color: crimson;
 }
 
-.nav-link:hover {
-  color: #fbb81e;
-  font-weight: 700;
-}
-
-/* ***************** */
-/* NEW NOTE SETTINGS */
-/* ***************** */
-
-.new-note {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 100rem;
-  height: 60rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  background-color: brown;
-  border-radius: 5px;
-}
-
-.window-title {
-  font-size: 2.4rem;
-}
-
-.note--subject {
-  width: 80rem;
-  margin: 0 auto;
-  height: 2.8rem;
-  resize: none;
-  font-size: 2.4rem;
-}
-
-.note--body {
-  width: 80rem;
-  height: 40rem;
-  margin: 0 auto;
-  font-size: 2rem;
-}
-
-.btns {
-  width: 15rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+.more-btn {
+  margin-right: 1.6rem;
 }
 
 /* ************************ */
@@ -239,6 +278,16 @@ main {
 /* ************************ */
 .hidden {
   display: none;
+}
+
+.selected {
+  background-color: #92832f;
+  color: #333;
+  font-weight: 600;
+}
+
+.selected:hover {
+  background-color: rgb(107, 99, 53);
 }
 
 /* TESTERS */

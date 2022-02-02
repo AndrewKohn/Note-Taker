@@ -2,7 +2,12 @@
 
 //Selecting elements
 const startScreenEl = document.querySelector(`.start-screen`);
-const noteMainEl = document.querySelector(`.note-app--main`);
+const noteMainEl = document.querySelector(`.note-app--container`);
+const subjectText = (document.querySelector(
+  `.subject-field`
+).value = `08-14-22`);
+const str = `- Dental appt @ 11:30AM\n- Get groceries\n- grab tools from work\n- Fix bathroom lightswitch\n`;
+const noteText = (document.querySelector(`.text-field`).value = str);
 
 function loadingBackgroundImg() {
   setTimeout(() => {
