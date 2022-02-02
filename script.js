@@ -13,7 +13,7 @@ function loadingBackgroundImg() {
   setTimeout(() => {
     document.querySelector(`.loader`).classList.toggle(`hidden`);
     startScreenEl.classList.remove(`hidden`);
-  }, 1000);
+  }, 5000);
 }
 
 loadingBackgroundImg();
