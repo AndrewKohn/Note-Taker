@@ -1,5 +1,7 @@
 /* LOADING CIRCLE */
 .loader {
+  position: absolute;
+  transform: translate(-50%, -50%);
   border: 0.8rem solid #464a5e;
   border-top: 0.8rem solid #af9e39;
   border-radius: 50%;
